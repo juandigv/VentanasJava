@@ -2,7 +2,7 @@ package jd.code;
 
 public class Ventana {
     private String titulo;
-    private Boton entrar ;
+    private Boton entrar;
     private Etiqueta etiquetaNombre, etiquetaPassword;
     private CampoTexto campoNombre, campoPassword;
 
@@ -14,13 +14,16 @@ public class Ventana {
         this.campoNombre = new CampoTexto("");
         this.campoPassword = new CampoTexto("");
     }
+
     public void insertarNombre(String nombre) {
         this.campoNombre.setTexto(nombre);
     }
+
     public void insertarPassword(String texto) {
         this.campoPassword.setTexto(texto);
     }
-    public boolean validar(){
+
+    public boolean validar() {
         String nombre = campoNombre.getTexto();
         String password = campoPassword.getTexto();
         return nombre.equals("Juan") && password.equals("1234");
